@@ -25,6 +25,27 @@ void computeHVLCS(string A, string B, map<char, int> alphabet, ofstream& outfile
         }
     }
 
-    // print max value of common subsequence
+    // post-processing
+    string result = "";
+    int n = A.length();
+    int m = B.length();
+
+    while(n > 0 && m > 0) {
+        if(A[n-1] == B[m-1]) {
+            // letter was taken
+            result = A[n-1] + result;
+            n--;
+            m--;
+        } else if(M[n-1][m] >= M[n][m-1]) {
+            // letter in A was skipped
+            n--;
+        } else {
+            // letter in B was skipped
+            m--;
+        }
+    }
+
+    // output max value of common subsequence and the common subsequence
     outfile << M[A.length()][B.length()] << endl;
+    outfile << result << endl;
 }
