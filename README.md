@@ -13,7 +13,7 @@ git clone https://github.com/alexissimpson/COP4533-PA3-CommonSequence.git
 
 ### 2. Navigate to the project directory
 ```
-cd COP455-PA3-CommonSequence
+cd COP4533-PA3-CommonSequence
 ```
 
 ### 3. Compile source files
