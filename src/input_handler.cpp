@@ -1,7 +1,6 @@
 #include "input_handler.h"
-#include "letters.h"
 #include <iostream>
-#include <vector>
+#include <map>
 #include <fstream>
 #include <sstream>
 using namespace std;
@@ -20,7 +19,7 @@ void handleInput(string filename){
     int K = stoi(line);
 
     // get the values for each char in the alphabet
-    vector<Letter> alphabet;
+    map<char, int> alphabet;
     for(int i = 0; i < K; i++){
         if(!getline(infile, line)){
             outfile << "Error: Alphabet information not given." << endl;
@@ -33,9 +32,12 @@ void handleInput(string filename){
         getline(ss, valueStr, ' ');
         int value = stoi(valueStr);
 
-        // add letters to alphabet vector
-        Letter newLetter = Letter(letter, value);
-        alphabet.push_back(newLetter);
+        // add letters to alphabet map
+        if(letter.length() != 1) {
+            outfile << "Error: Alphabet letter not a valid char." << endl;
+            return;
+        }
+        alphabet.insert({letter[0], value});
     }
 
     // get strings A and B
