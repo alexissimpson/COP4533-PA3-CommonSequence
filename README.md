@@ -8,7 +8,7 @@
 ## Installation and Usage:
 ### 1. Clone the repository
 ```
-git clone https://github.com/alexissimpson COP4533-PA3-CommonSequence.git
+git clone https://github.com/alexissimpson/COP4533-PA3-CommonSequence.git
 ```
 
 ### 2. Navigate to the project directory
