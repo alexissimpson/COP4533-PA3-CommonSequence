@@ -1,4 +1,5 @@
 #include "input_handler.h"
+#include "hvlcs_algorithm.h"
 #include <iostream>
 #include <map>
 #include <fstream>
@@ -6,9 +7,9 @@
 using namespace std;
 
 void handleInput(string filename){
-    cout << "Handling Input..." << endl;
-    ofstream outfile("../data/output/OUTPUT.txt");
-    ifstream infile("../data/input/" + filename);
+    cout << "Handling Input From File: " << filename << endl;
+    ofstream outfile("./data/output/OUTPUT.txt");
+    ifstream infile("./data/input/" + filename);
     string line;
 
     // get first line k, the number of chars in the alphabet
@@ -55,7 +56,7 @@ void handleInput(string filename){
 
     infile.close();
 
-    // call functions for finding HVLCS (NEED TO ADD CODE HERE)
+    computeHVLCS(A, B, alphabet, outfile);
 
     outfile.close();
 }

@@ -1,7 +1,7 @@
 #pragma once
 
-#include<vector>
+#include<map>
 #include<fstream>
 using namespace std;
 
-void computeHVLCS(string A, string B, vector<Letter> alphabet, ofstream& outfile);
+void computeHVLCS(string A, string B, map<char, int> alphabet, ofstream& outfile);
