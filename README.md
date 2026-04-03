@@ -31,14 +31,14 @@ g++ -std=c++17 src/*.cpp -o HVLCS
 Must have the g++ GNU compiler
 
 ## Expected Input / Output:
-
-## Written Component:
-### Question 1: Empirical Comparison
 Example input files are listed under /data/input. The input file will be specified in a command alongside the executable as shown in step 4 above.
 
 Upon execution, the program will compute a common subsequence of A and B that maximizes the total value. It will output the maximum value and then the corresponding subsequence. The result will be written to the OUTPUT.txt file located at /data/output/OUTPUT.txt.
 
 Example output for running test_input.txt is located at /data/output/test_output.txt
+
+## Written Component:
+### Question 1: Empirical Comparison
 
 ### Question 2: Recurrence Equation
 
