@@ -39,7 +39,7 @@ Example output for running test_input.txt is located at /data/output/test_output
 
 ## Written Component:
 ### Question 1: Empirical Comparison
-<img width="521" height="417" alt="image" src="https://github.com/user-attachments/assets/81e97e49-5a04-4f79-9326-cce227b05142" />
+<img width="774" height="469" alt="image" src="https://github.com/user-attachments/assets/81e97e49-5a04-4f79-9326-cce227b05142" />
 The 10 test files used are stored in /data/input/ with the names listed.
 
 ### Question 2: Recurrence Equation
