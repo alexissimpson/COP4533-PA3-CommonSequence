@@ -30,9 +30,19 @@ g++ -std=c++17 src/*.cpp -o HVLCS
 ## Dependencies:
 Must have the g++ GNU compiler
 
-## Question 2: Recurrence Equation
+## Expected Input / Output:
 
-### Cases:
+## Written Component:
+### Question 1: Empirical Comparison
+Example input files are listed under /data/input. The input file will be specified in a command alongside the executable as shown in step 4 above.
+
+Upon execution, the program will compute a common subsequence of A and B that maximizes the total value. It will output the maximum value and then the corresponding subsequence. The result will be written to the OUTPUT.txt file located at /data/output/OUTPUT.txt.
+
+Example output for running test_input.txt is located at /data/output/test_output.txt
+
+### Question 2: Recurrence Equation
+
+#### Cases:
  - Base case: i or j = 0, OPT(i, j) = 0
  - Case 1: letters i and j match
    - Add the value of the common letter
@@ -41,11 +51,13 @@ Must have the g++ GNU compiler
  - Case 2b: OPT skips letter j
    - OPT(i, j-1)
 
-### Equation:
+#### Equation:
 
-#### OPT(i, j) = {
-#### &emsp; 0 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; if i or j = 0
-#### &emsp; max{ v[i] + OPT(i-1, j-1), OPT(i-1, j), OPT(i, j-1) } &emsp; otherwise
-#### }
+OPT(i, j) = {
+&emsp; 0 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; if i or j = 0
+&emsp; max{ v[i] + OPT(i-1, j-1), OPT(i-1, j), OPT(i, j-1) } &emsp; otherwise
+}
+
+### Question 3: Big-Oh
 
  
