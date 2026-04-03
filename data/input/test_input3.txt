@@ -1,0 +1,18 @@
+15
+a 8
+r 3
+d 4
+w 12
+g 7
+j 8
+k 8
+l 3
+m 1
+n 44
+e 20
+q 10
+p 2
+i 7
+u 5
+qjkrdaalmnjgwwdqeeiuqgdwa
+jawppeeqdaaweigdwkirralmn

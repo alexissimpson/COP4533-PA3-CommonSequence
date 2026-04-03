@@ -1,0 +1,13 @@
+10
+a 4
+b 6
+c 10
+d 3
+e 22
+f 1
+g 7
+h 3
+u 5
+i 6
+acdehfgghuiedccbbaabuifgd
+adefghhuuiieccbagfddheuia

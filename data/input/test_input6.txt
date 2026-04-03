@@ -1,0 +1,8 @@
+5
+a 3
+c 7
+f 1
+l 2
+w 4
+clflaacalwcfaacccflflwacf
+wcffaalwccalfcwwaallllfac

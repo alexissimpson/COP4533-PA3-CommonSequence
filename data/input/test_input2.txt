@@ -1,0 +1,8 @@
+5
+c 6
+s 7
+f 11
+t 4
+g 2
+sftcgggssftsgccstgssctgff
+fftscggsctsscstgfsfffscft
