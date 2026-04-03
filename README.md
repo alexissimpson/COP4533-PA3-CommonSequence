@@ -58,6 +58,7 @@ The 10 test files used are stored in /data/input/ with the names listed.
 
 OPT(i, j) = {
 &emsp; 0 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; if i or j = 0
+
 &emsp; max{ v[i] + OPT(i-1, j-1), OPT(i-1, j), OPT(i, j-1) } &emsp; otherwise
 }
 
