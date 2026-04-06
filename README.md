@@ -69,5 +69,38 @@ OPT(i, j) = {
 
 
 ### Question 3: Big-Oh
-
+#### Input Variables:
+ - n = length of string A
+ - m = length of string B
+ - alphabet = map of characters to their values
+#### Pseudocode:
+Initialize memoization array M[][]\
+for i = 0 to n:\
+&emsp;M[i][0] = 0\
+for j = 0 to m:\
+&emsp;M[0][j] = 0\
+\
+for i = 1 to n:\
+&emsp;for j = 1 to m:\
+&emsp;&emsp;value = 0\
+&emsp;&emsp;if a<sub>i</sub> == b<sub>j</sub>:\
+&emsp;&emsp;&emsp;value = alphabet[a<sub>i</sub>]\
+&emsp;&emsp;M[i][j] = max{ value + M[i-1][j-1], M[i-1][j], M[i][j-1] }\
+\
+length = 0\
+while n>0 and m>0:\
+&emsp;if a<sub>n-1</sub> == b<sub>m-1</sub>:\
+&emsp;&emsp;length++\
+&emsp;&emsp;n--\
+&emsp;&emsp;m--\
+&emsp;else if M[n-1][m] >= M[n][m-1]\
+&emsp;&emsp;n--\
+&emsp;else\
+&emsp;&emsp;m--\
+\
+return length\
  
+#### Running Time:
+ - O(nm) to find max value of HVLCS
+ - O(nm) to find length of HVLCS
+ - Overall: O(nm)
