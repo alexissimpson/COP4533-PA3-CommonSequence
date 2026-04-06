@@ -45,22 +45,28 @@ The 10 test files used are stored in /data/input/ with the names listed.
 
 ### Question 2: Recurrence Equation
 
-#### Cases:
- - Base case: i or j = 0, OPT(i, j) = 0
- - Case 1: letters i and j match
-   - Add the value of the common letter
- - Case 2a: OPT skips letter i
-   - OPT(i-1, j)
- - Case 2b: OPT skips letter j
-   - OPT(i, j-1)
+OPT(i,j) is defined as the maximum value produced by a common subsequence of strings a<sub>1</sub>a<sub>2</sub>...a<sub>i</sub> and b<sub>1</sub>b<sub>2</sub>...b<sub>j</sub>
 
-#### Equation:
+#### Cases:
+ - Base case: i or j = 0
+   - Value is zero
+ - Case 1: letters a<sub>i</sub> and b<sub>j</sub> match
+   - Consider adding the value of the common letter
+ - Case 2a: OPT skips letter a<sub>i</sub>
+   - Move to OPT(i-1, j)
+ - Case 2b: OPT skips letter b<sub>j</sub>
+   - Move to OPT(i, j-1)
+
+#### Recurrence Equation:
 
 OPT(i, j) = {
-&emsp; 0 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; if i or j = 0
 
-&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; max{ v[i] + OPT(i-1, j-1), OPT(i-1, j), OPT(i, j-1) } &emsp; otherwise
-}
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 0 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp; if i or j = 0
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; max{ OPT(i-1, j), OPT(i, j-1) } &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp; if letters a<sub>i</sub> and b<sub>j</sub> don't match
+
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; max{ v(a<sub>i</sub>) + OPT(i-1, j-1), OPT(i-1, j), OPT(i, j-1) } &emsp; otherwise
+
 
 ### Question 3: Big-Oh
 
