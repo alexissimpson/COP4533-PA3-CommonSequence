@@ -98,7 +98,7 @@ while n>0 and m>0:\
 &emsp;else\
 &emsp;&emsp;m--\
 \
-return length\
+return length
  
 #### Running Time:
  - O(nm) to find max value of HVLCS
